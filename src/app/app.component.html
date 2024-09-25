@@ -1,0 +1,51 @@
+ <body [ngClass]="{'hightlight':isHighlight}">
+<h2> ngIf Example</h2>
+<button *ngIf="data">sign in</button><br><br>
+
+<button *ngIf="!data">sign up</button>
+<h2> ngFor Example</h2>
+
+<ul *ngFor="let i of numbers">
+    <li>{{i}}</li>
+
+</ul>
+<h3> Example 2</h3>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tbody *ngFor="let std of students"> 
+        <tr>
+            <td>{{std.id}}</td>
+            <td>{{std.name}}</td>
+            <td>{{std.age}}</td>
+      
+        </tr>
+
+
+
+    </tbody>
+</table>
+
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'yellow'">yellow color</p>
+    <p *ngSwitchCase="'Red'">Red color</p>
+    <p *ngSwitchDefault>Default color</p>
+
+
+</div>
+
+<h2> Attribute Directives</h2>
+<button (click)="hightlightonoff()">hightlight on/off</button>
+
+<!-- < ng style></ng> -->
+ <div [ngStyle]="{'font-size':fontSize}">
+    My name is Aishwarya
+
+ </div>
+ <button (click)="increase()">Increase</button>
+ <button (click)="decrease()">Decrease</button>
+
+ </body>
